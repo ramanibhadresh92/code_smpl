@@ -1,0 +1,44 @@
+#MAILTO="kalpak.yugtia@gmail.com"
+SHELL="/bin/sh"
+30	20	*	*	*	/opt/plesk/php/7.1/bin/php /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/artisan SaveDailySummaryReport >> /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/storage/logs/SaveDailySummaryReport.log
+0	21	*	*	*	/opt/plesk/php/7.1/bin/php /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/artisan SendDailySummaryReport >> /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/storage/logs/SendDailySummaryReport.log
+0	22	*	*	*	/opt/plesk/php/7.1/bin/php /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/artisan SendCollectionVarianceReport >> /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/storage/logs/SendCollectionVarianceReport.log
+20	22	*	*	*	/opt/plesk/php/7.1/bin/php /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/artisan SendDuplicateCollectionReport >> /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/storage/logs/SendDuplicateCollectionReport.log
+15	21	*	*	*	/opt/plesk/php/7.1/bin/php /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/artisan SendReportToInvestor >> /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/storage/logs/SendReportToInvestor.log
+*/1	*	*	*	*	/opt/plesk/php/7.1/bin/php /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/artisan SaveAppointmentReqeust >> /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/storage/logs/SaveAppointmentReqeust.log
+*/1	*	*	*	*	/opt/plesk/php/7.1/bin/php /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/artisan updatefocappointment >> /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/storage/logs/updatefocappointment.log
+55	19	*	*	*	/opt/plesk/php/7.1/bin/php /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/artisan SendMissedAppointmentReport >> /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/storage/logs/SendMissedAppointmentReport.log
+20	23	*	*	*	/opt/plesk/php/7.1/bin/php /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/artisan MarkAppointmentAsScheduledCancelled >> /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/storage/logs/MarkAppointmentAsScheduledCancelled.log
+15	20	*	*	*	/opt/plesk/php/7.1/bin/php /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/artisan SendDailyBatchReport >> /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/storage/logs/SendDailyBatchReport.log
+
+#LateRunningAppointments
+*/30	*	*	*	*	/opt/plesk/php/7.1/bin/php /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/artisan PossibleRunningLateAppointments >> /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/storage/logs/PossibleRunningLateAppointments.log
+
+#CollectionNotUnloaded
+50	8	*	*	*	/opt/plesk/php/7.1/bin/php /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/artisan CollectionNotUnloaded >> /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/storage/logs/CollectionNotUnloaded.log
+
+
+#ArchiveAdminGEOCodes
+0       4       *       *       *       /opt/plesk/php/7.1/bin/php /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/artisan ArchiveAdminGeoCodes >> /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/storage/logs/ArchiveAdminGeoCodes.log
+
+#INSERT META DATA FOR VARIOUS CHARTS AND ANALYTICAL DASHBOARD
+0	5	*	*	*	/opt/plesk/php/7.1/bin/php /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/artisan InsertMetaData >> /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/storage/logs/InsertMetaData.log
+
+#CancelledAppointmentReport
+0 * * * * /opt/plesk/php/7.1/bin/php /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/artisan CancelledAppointmentReport >> /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/storage/logs/CancelledAppointmentReport.log
+
+0	6	*	*	*	/opt/plesk/php/7.1/bin/php /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/artisan UpdateCustomerAverageCollectionData >> /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/storage/logs/UpdateCustomerAverageCollectionData.log
+
+#UPDATE STOCE LEDGER EVERY DAY 12:15 AM
+15	0	*	*	*	/opt/plesk/php/7.1/bin/php /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/artisan UpdateStockLadger >> /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/storage/logs/UpdateStockLadger.log
+
+#WGNA REPORT EVERY SATURDAY 10:00 AM
+0 10 * * 6  /opt/plesk/php/7.1/bin/php /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/artisan WGNAReport >> /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/storage/logs/WGNAReport.log
+
+
+#CFMAttendance REPORT EVERY DAY 01:15 AM
+15 1 * * *  /opt/plesk/php/7.1/bin/php /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/artisan CFMAttendance >> /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/storage/logs/CFMAttendance.log
+
+
+#common schedule for cronjobs
+#*	*	*	*	*	/opt/plesk/php/7.1/bin/php /var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/artisan schedule:run >> /dev/null 2>&1

@@ -1,0 +1,25 @@
+{
+    "name": "nwidart/masteradmin",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\MasterAdmin\\Providers\\MasterAdminServiceProvider"
+            ],
+            "aliases": {
+                
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\MasterAdmin\\": ""
+        }
+    }
+}

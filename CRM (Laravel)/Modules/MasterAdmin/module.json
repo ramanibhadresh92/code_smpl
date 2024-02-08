@@ -1,0 +1,16 @@
+{
+    "name": "MasterAdmin",
+    "alias": "masteradmin",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\MasterAdmin\\Providers\\MasterAdminServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "start.php"
+    ],
+    "requires": []
+}

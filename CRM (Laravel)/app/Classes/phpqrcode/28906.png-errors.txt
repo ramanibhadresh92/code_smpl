@@ -1,0 +1,1 @@
+2021-05-15 07:30:48: Use of undefined constant QR_MODE_AN - assumed 'QR_MODE_AN'2021-05-15 07:31:03: Use of undefined constant QR_MODE_AN - assumed 'QR_MODE_AN'2021-09-25 12:45:54: empty string!!!2021-09-25 12:45:56: empty string!!!

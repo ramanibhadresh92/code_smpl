@@ -1,0 +1,1 @@
+2021-05-14 16:41:11: Use of undefined constant QR_ECLEVEL_H - assumed 'QR_ECLEVEL_H'2021-05-14 16:46:04: Use of undefined constant QR_ECLEVEL_H - assumed 'QR_ECLEVEL_H'

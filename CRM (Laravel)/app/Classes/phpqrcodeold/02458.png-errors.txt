@@ -1,0 +1,1 @@
+2021-04-01 17:07:09: imagepng(/var/www/vhosts/nepra.co.in/v2-api.letsrecycle.co.in/public/phpqrcode/11/02458.png): failed to open stream: No such file or directory
